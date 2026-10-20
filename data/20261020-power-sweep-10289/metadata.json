@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-20T07:35:06.596961+00:00",
+  "mode": "真实功率计 + FPGA",
+  "wavelength_nm": 556,
+  "uart_port": "COM9",
+  "baud": 115200,
+  "recording_mode": "continuous",
+  "meter_serial": "P2007293",
+  "channel": "候选 0",
+  "config": {
+    "stability_filter": false
+  },
+  "note": "556 nm MOT 单束；记录功率计测量平面、PD增益、ADC负载档位",
+  "synchronization": "nearest host timestamp, max skew 0.2 s, not hardware sync",
+  "adc_sample_rate_hz": 5000000.0,
+  "adc_window_samples": 262144,
+  "code_definition": "offset binary; two-complement firmware XORs bit13 before averaging",
+  "meter_identity": {
+    "model": "PM100USB",
+    "serial": "P2007293",
+    "resource": "USB0::0x1313::0x8072::P2007293::INSTR",
+    "wavelength_nm": 556.0,
+    "unit": "W",
+    "driver": "C:\\Program Files\\IVI Foundation\\VISA\\Win64\\Bin\\TLPMX_64.dll"
+  }
+}
