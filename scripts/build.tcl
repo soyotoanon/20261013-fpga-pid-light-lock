@@ -34,6 +34,7 @@ set rtl_files {
     log_arbiter.v
     monitor.v
     power_display.v
+    power_display_piecewise.v
     pi_ctrl.v
     recip_pow2.v
     reg_file.v

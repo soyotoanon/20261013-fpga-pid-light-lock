@@ -139,12 +139,14 @@ module light_lock_top #(
     always @(posedge sys_clk or negedge sys_rst_n)
         if (!sys_rst_n) display_otr_sync <= 0;
         else display_otr_sync <= {display_otr_sync[0],adc_otr};
-    power_display u_power_display (
+    wire [23:0] displayed_bcd;
+    wire displayed_valid;
+    power_display_piecewise u_power_display (
         .clk(sys_clk), .rst_n(sys_rst_n),
         .pi_code(adc_sample), .sample_valid(adc_sample_valid),
         .feedback_channel(feedback_ch_r[0]), .otr(display_otr_sync[1]),
-        .cfg_we(reg_we), .cfg_addr(reg_addr), .cfg_data(reg_wdata),
-        .seg_sel_n(seg_sel_n), .seg_n(seg_n), .power_units(), .display_valid()
+        .seg_sel_n(seg_sel_n), .seg_n(seg_n), .power_units(), .display_valid(),
+        .display_bcd(displayed_bcd), .display_frame_valid(displayed_valid)
     );
 
     // ---------------------------------------------------------------- 扰动
@@ -370,6 +372,7 @@ module light_lock_top #(
         .addr          (reg_addr),
         .wdata         (reg_wdata),
         .rdata         (reg_rdata),
+        .live_display_bcd(displayed_bcd), .live_display_valid(displayed_valid),
         .live_adc      (live_adc_w),
         .live_err      (live_err_w),
         .live_out      (live_out_w),

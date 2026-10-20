@@ -1,0 +1,67 @@
+{
+  "n": 251,
+  "invalid_n": 0,
+  "duration_s": 60.04699999996228,
+  "power_min_mw": 0.226843535,
+  "power_max_mw": 14.8294475,
+  "bias_mw": 0.007830467043824695,
+  "mae_mw": 0.07844654286055779,
+  "rmse_mw": 0.17191361867009297,
+  "max_abs_mw": 1.1799318549999995,
+  "p95_absolute_error_mw": 0.3297159549999995,
+  "old12_inferred_mae_mw": 0.13723283842515607,
+  "new30_inferred_mae_mw": 0.13663583490572548,
+  "bins": [
+    {
+      "low": 0,
+      "high": 1,
+      "n": 96,
+      "bias_mw": 0.010137904250000001,
+      "mae_mw": 0.010137904250000001,
+      "rmse_mw": 0.011833145375996857,
+      "old12_inferred_bias_mw": -0.005825309209296271,
+      "new30_inferred_bias_mw": 0.003924331305205062
+    },
+    {
+      "low": 1,
+      "high": 2,
+      "n": 6,
+      "bias_mw": 0.07916462583333332,
+      "mae_mw": 0.11227137416666662,
+      "rmse_mw": 0.15022096881265168,
+      "old12_inferred_bias_mw": -0.1003951850793593,
+      "new30_inferred_bias_mw": -0.07988401638187552
+    },
+    {
+      "low": 2,
+      "high": 5,
+      "n": 67,
+      "bias_mw": 0.009660094776119395,
+      "mae_mw": 0.07236722014925374,
+      "rmse_mw": 0.13465617485047057,
+      "old12_inferred_bias_mw": 0.016018125701141323,
+      "new30_inferred_bias_mw": 0.018279560667365705
+    },
+    {
+      "low": 5,
+      "high": 10,
+      "n": 26,
+      "bias_mw": -0.033420159038461655,
+      "mae_mw": 0.2907697425,
+      "rmse_mw": 0.4279924615644104,
+      "old12_inferred_bias_mw": -0.033654301901594755,
+      "new30_inferred_bias_mw": -0.03705696421410449
+    },
+    {
+      "low": 10,
+      "high": 15,
+      "n": 56,
+      "bias_mw": 0.013194972321428602,
+      "mae_mw": 0.10061782410714293,
+      "rmse_mw": 0.15188151734014582,
+      "old12_inferred_bias_mw": 0.020509821027358148,
+      "new30_inferred_bias_mw": 0.018441637955259153
+    }
+  ],
+  "note": "60-second changing-power experiment, USB timestamps not synchronized; dynamic error includes averaging and instrument delay, not a steady-state calibration validation."
+}

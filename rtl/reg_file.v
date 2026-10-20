@@ -45,6 +45,8 @@ module reg_file (
     input  wire [15:0] wdata,
     output reg  [15:0] rdata,
     // 实时只读量（外部驱动）
+    input wire [23:0] live_display_bcd,
+    input wire live_display_valid,
     input  wire [15:0] live_adc,
     input  wire [15:0] live_err,
     input  wire [15:0] live_out,
@@ -211,7 +213,10 @@ module reg_file (
             6'h2A:   rdata = live_integ[15:0];
             6'h2B: rdata = live_integ[31:16];
             6'h2C,6'h2D,6'h2E: rdata = mem[addr];
-            6'h30,6'h31,6'h32,6'h33,6'h34,6'h35,6'h36,6'h37: rdata = mem[addr];
+            6'h30,6'h31,6'h32,6'h33,6'h34,6'h35,6'h36,6'h37: rdata = 0; // legacy affine config inactive
+            6'h38: rdata = 16'h5030; // piecewise power firmware ID
+            6'h39: rdata = live_display_bcd[15:0];
+            6'h3A: rdata = {live_display_valid,7'd0,live_display_bcd[23:16]};
             default: rdata = 16'd0;
         endcase
     end
