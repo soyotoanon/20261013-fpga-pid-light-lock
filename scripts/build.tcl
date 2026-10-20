@@ -33,6 +33,7 @@ set rtl_files {
     light_lock_top.v
     log_arbiter.v
     monitor.v
+    power_display.v
     pi_ctrl.v
     recip_pow2.v
     reg_file.v

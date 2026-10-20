@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1]
 bin=Path('D:/Xilinx/Vivado/2023.2/bin')
 out=root/'build'/'revision_sim'; out.mkdir(parents=True,exist_ok=True)
 tests=sys.argv[1:] or ['tb_adc_stats','tb_sig_audit','tb_sig_gen','tb_sig_lut',
-    'tb_step_gen','tb_sweep_gen','tb_uart_loop','tb_pi_revision','tb_sample_revision','tb_dac_timing_revision']
+    'tb_step_gen','tb_sweep_gen','tb_uart_loop','tb_pi_revision','tb_sample_revision','tb_dac_timing_revision','tb_power_display_revision']
 def run(name,args,log):
     r=subprocess.run([str(bin/(name+'.bat')),*map(str,args)],cwd=out,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=180)
     s=r.stdout.decode('utf-8',errors='replace');(out/log).write_text(s,encoding='utf-8')

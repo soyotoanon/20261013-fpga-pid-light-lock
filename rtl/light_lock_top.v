@@ -35,6 +35,8 @@ module light_lock_top #(
     input  wire        uart_rx,
     // 状态灯（板载 LED，方便不接示波器时看死活）
     output wire        led_heartbeat,
+    output wire [5:0] seg_sel_n,
+    output wire [7:0] seg_n,
     output wire [1:0]  led_status
 );
 
@@ -129,6 +131,20 @@ module light_lock_top #(
         .otr_count        (otr_count),
         .adc_clk_alive    (adc_clk_alive),
         .dac_code_now     (dac_code_now)
+    );
+
+    // 2026-10-20: independent calibrated power display, units mW.
+    // Synchronize the physical overrange flag for this observer.
+    (* ASYNC_REG="TRUE" *) reg [1:0] display_otr_sync;
+    always @(posedge sys_clk or negedge sys_rst_n)
+        if (!sys_rst_n) display_otr_sync <= 0;
+        else display_otr_sync <= {display_otr_sync[0],adc_otr};
+    power_display u_power_display (
+        .clk(sys_clk), .rst_n(sys_rst_n),
+        .pi_code(adc_sample), .sample_valid(adc_sample_valid),
+        .feedback_channel(feedback_ch_r[0]), .otr(display_otr_sync[1]),
+        .cfg_we(reg_we), .cfg_addr(reg_addr), .cfg_data(reg_wdata),
+        .seg_sel_n(seg_sel_n), .seg_n(seg_n), .power_units(), .display_valid()
     );
 
     // ---------------------------------------------------------------- 扰动

@@ -1,3 +1,4 @@
+`include "power_calibration_20261020.vh"
 `timescale 1ns / 1ps
 // ============================================================================
 //  reg_file.v —— 寄存器堆（【05 参数设置】【12 目标光强】【16 PI 在线调整】的载体）
@@ -128,6 +129,13 @@ module reg_file (
                 6'h26:   default_value = 16'd4096;  // DIST_PERIOD
                 6'h27:   default_value = 16'd64;    // LOG_EVERY
                 6'h29:   default_value = 16'd434;   // BAUD_DIV = 50MHz/115200
+                6'h30: default_value = 16'h0001;
+                6'h31: default_value = `POWER_ZERO_Q16 & 16'hffff;
+                6'h32: default_value = (`POWER_ZERO_Q16 >> 16) & 16'hffff;
+                6'h33: default_value = `POWER_GAIN_Q20 & 16'hffff;
+                6'h34: default_value = (`POWER_GAIN_Q20 >> 16) & 16'hffff;
+                6'h35: default_value = `POWER_CODE_MIN;
+                6'h36: default_value = `POWER_CODE_MAX;
                 default: default_value = 16'd0;
             endcase
         end
@@ -203,6 +211,7 @@ module reg_file (
             6'h2A:   rdata = live_integ[15:0];
             6'h2B: rdata = live_integ[31:16];
             6'h2C,6'h2D,6'h2E: rdata = mem[addr];
+            6'h30,6'h31,6'h32,6'h33,6'h34,6'h35,6'h36,6'h37: rdata = mem[addr];
             default: rdata = 16'd0;
         endcase
     end

@@ -6,3 +6,6 @@ xsim.dir/
 *.log
 build/
 *.dcp
+
+.pytest_cache/
+!validation/**/*.log

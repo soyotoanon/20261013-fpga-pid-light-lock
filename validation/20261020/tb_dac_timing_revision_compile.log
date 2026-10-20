@@ -1,0 +1,44 @@
+ECHO is off.
+ECHO is off.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/adc_dac_core.v" into library work
+INFO: [VRFC 10-311] analyzing module adc_dac_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/adc_drv.v" into library work
+INFO: [VRFC 10-311] analyzing module adc_drv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/adc_stats.v" into library work
+INFO: [VRFC 10-311] analyzing module adc_stats
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/add_sat.v" into library work
+INFO: [VRFC 10-311] analyzing module add_sat
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/ctrl_tick.v" into library work
+INFO: [VRFC 10-311] analyzing module ctrl_tick
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/dac_drv.v" into library work
+INFO: [VRFC 10-311] analyzing module dac_drv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/dac_sig_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module dac_sig_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/dbg_marker.v" into library work
+INFO: [VRFC 10-311] analyzing module dbg_marker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/light_lock_top.v" into library work
+INFO: [VRFC 10-311] analyzing module light_lock_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/log_arbiter.v" into library work
+INFO: [VRFC 10-311] analyzing module log_arbiter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/monitor.v" into library work
+INFO: [VRFC 10-311] analyzing module monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/pi_ctrl.v" into library work
+INFO: [VRFC 10-311] analyzing module pi_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/power_display.v" into library work
+INFO: [VRFC 10-311] analyzing module power_display
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/recip_pow2.v" into library work
+INFO: [VRFC 10-311] analyzing module recip_pow2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/reg_file.v" into library work
+INFO: [VRFC 10-311] analyzing module reg_file
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/step_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module step_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/sweep_gen.v" into library work
+INFO: [VRFC 10-311] analyzing module sweep_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/uart_proto.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_proto
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/uart_rx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/rtl/uart_tx.v" into library work
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/codex/2026-10-20/adc-adc-fpga-fpga-fpga-ui-2/outputs/pid_update_20261020/tb/tb_dac_timing_revision.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_dac_timing_revision
